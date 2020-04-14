@@ -7,7 +7,13 @@ import Register_Patient from './Register_Patient'
 import Display_Data from './Display_Data'
 import Hospital from './Hospital'
 import Metamask from './Metamask'
+// var exphbs  = require('express-handlebars');
  
+// var app = express();
+ 
+// app.engine('handlebars', exphbs());
+// app.set('view engine', 'handlebars');
+
 class App extends Component {
 
   async componentWillMount() {
@@ -189,7 +195,7 @@ captureFile(event){
                   ref={(input) => { this.p_id = input }}
                   placeholder="Enter Patient ID"
                   required />
-                  <button type="submit">SUBMIT</button>
+                  <button class = "btn btn-success"  type="submit">SUBMIT</button>
               </form>
               {this.state.print ?
                 <Display_Data
@@ -230,7 +236,7 @@ captureFile(event){
                   ref={(input) => { this.h_id = input }}
                   placeholder="E.g. 0x692991888659c3e8Ad043B262B0AF97415eA4aDB"
                   required />
-                  <button type="submit">SUBMIT</button>
+                  <button class = "btn btn-success" type="submit">SUBMIT</button>
               </form>
               {this.state.h_id ?
                 <Hospital
@@ -246,4 +252,8 @@ captureFile(event){
   }
 }
  
+
+// app.use(PORT,() = > {
+//   console.log()
+// })
 export default App;

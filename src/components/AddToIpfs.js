@@ -39,7 +39,7 @@ class AddToIpfs extends Component {
                     className="form-control"
                     placeholder="Enter Patient ID"
                     required />
-            <button type="submit">SUBMIT</button>
+            <button class = "btn btn-success"  type="submit">SUBMIT</button>
          </form>
          {this.state.print ?
           <h5>Invalid Patient ID!!! </h5> : <div></div>
